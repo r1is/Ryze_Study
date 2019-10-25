@@ -1,1 +1,0 @@
-# Ryze_Study
