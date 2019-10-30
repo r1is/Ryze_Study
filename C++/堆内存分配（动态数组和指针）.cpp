@@ -10,6 +10,11 @@ int main()
     cin>>arraysize;
     cout<<"int的大小为："<<sizeof(int)<<endl;
     array = (int *)malloc(arraysize *sizeof(int));//堆内存分配
+// 上述写法不安全，如果堆内空间不够，这时对该指针的访问都是破坏性的
+//if(arry=(int *)malloc(arraysize*sizeof(int))==NULL)
+//{cout<<"申请内存失败！\n";
+//exit(1);
+//}
     for(int i=0;i<arraysize;i++)
         array[i]=i*3;
     for(int i=0;i<arraysize;i++)
